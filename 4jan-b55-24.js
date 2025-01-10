@@ -8,8 +8,8 @@ let res=nu1+num2;
 
 document.write(`<h1 style="background-color:green"><span style="color:red"> ${nu1}</span>+ ${num2}=${res}</h1>`)
 
-let n1 =Number( prompt("enter the first n1"))
-let n2= Number(prompt("enter the num2 "))
+let n1 =34
+let n2=13
 
 let r=n1+n2;
 document.write(`result: ${r}`)

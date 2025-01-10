@@ -111,19 +111,33 @@
 
 // not oprator(!)
 
-let a=56;
-let b=45;
-let c=78
-let c1=a!=b && b>40 && b>30
-document.write(`${a} and ${b}=${c1} `)
+// ternary oprator
+
+//  let marks=55;
+//  let result=(marks>45) ? 'Pass':'fail';
+
+// document.write(`${result}`)
+
+// unary oprator
+// let a=55;
+// let t=+a
+// document.write(`${t}`);
 
 
+//asignment oprotor
+// let a=10;
+// a=a+10
+// a+=20;
 
+// document.write(`${a}`)
 
+let age=15;
+if(!(age>18)){
 
-
-
-
+    console.log("Eligible for voting ")
+}else{
+    console.log("not Eligible");
+}
 
 
 
