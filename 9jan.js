@@ -43,10 +43,7 @@ console.log(f)
 //     console.log()
 // }
 
-let num1=55;
-let num2=57;
-let num3=39;
- let secNum;
+
 
 
 // if(num1<num2&&num1<num3){
@@ -64,7 +61,10 @@ let num3=39;
 // ;  console.log(secNum);
 // }
 
-
+let num1=55;
+let num2=57;
+let num3=39;
+ let secNum;
 
  if(num2>num1 && num1>num3 || num3>num1 && num1>num2){
     secNum=num1;
