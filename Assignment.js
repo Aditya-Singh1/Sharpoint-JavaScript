@@ -341,7 +341,7 @@
 // }
 
 
-//-------Q 10--------------------------------------
+//Q 10---------------------------------------------------------------------
 // let question1="what is 2+2?"
 // let question2="what is 2-2?"
 // let question3="what is 2*2?"
@@ -360,7 +360,13 @@
 // let rightAns4="c"
 // let rightAns5="b"
 
-//  // Game State Variables
+// let score1=1000;
+// let score2=2000;
+// let score3=3000;
+// let score4=5000;
+// let score5=10000;
+
+// // Game State Variables
 // let totalScore =+ 0;
 // let correctAnswers =+ 0;
 // let skippedQuestions = 0;
@@ -382,25 +388,31 @@
 // }
 
 
-// let count=+1;
+ 
 // function gameproces(){
 
-// if(currentQuestionIndex<count){
+// // if(currentQuestionIndex<count){
 
-// count++;
+// // count++;
 
 // let userAns=prompt(`${question1}\n ${opt1} skip to skip`);
-// if(userAns==="skip" || userAns=="c" ){
+// if(userAns==="C"|| userAns==="c" ){
 
-//     skippedQuestions++;  
+//  correctAnswers++;
+//  totalScore+=score1=1000; 
+
+// }else if(userAns==="skip") {
+//     skippedQuestions++;
 //    //document.write('skip question')
-
+//    }else{
+//     wrongAnswers++
+//    }
 //    //---------2 Q
    
 //    userAns=prompt(`${question2}\n${opt2}`)
 //    if(userAns==="b"||userAns==="B"){
 //    correctAnswers++;
-//    totalScore+=rightAns2=2000;
+//    totalScore+=score2=2000;
 //    //document.write("correct Ans")
    
 //    }else if(userAns==="skip"){
@@ -417,7 +429,7 @@
 //    userAns=prompt(`${question3}\n${opt3}`)
 //    if(userAns==="b"||userAns==="B"){
 //    correctAnswers++;
-//    totalScore+=rightAns3=3000;
+//    totalScore+=score3=3000;
    
    
 //    }else if(userAns==="skip"){
@@ -435,7 +447,7 @@
 //    userAns=prompt(`${question4}\n${opt4}`)
 //    if(userAns==="c"||userAns==="C"){
 //    correctAnswers++;
-//    totalScore+=rightAns4=5000;
+//    totalScore+=score4=5000;
    
    
 //    }else if(userAns==="skip"){
@@ -453,9 +465,9 @@
    
    
 //    userAns=prompt(`${question5}\n${opt5}`)
-//    if(userAns==="B"||userAns==="B"){
+//    if(userAns==="b"||userAns==="B"){
 //    correctAnswers++;
-//    totalScore+=rightAns3=10000;
+//    totalScore+=score5=10000;
    
    
 //    }else if(userAns==="skip"){
@@ -469,7 +481,7 @@
 //     endgame();
 // }
  
-// } 
+
 
 
 // function endgame(){
@@ -489,8 +501,12 @@
 
 // }
 
-// }
 // strt();
+
+
+
+
+
 
 
 
