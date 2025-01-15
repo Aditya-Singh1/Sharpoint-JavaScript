@@ -47,41 +47,26 @@ if(currentQuestionIndex<count){
 count++;
 
 let userAns=prompt(`${question1}\n ${opt1} skip to skip`);
-if(userAns==="skip"){
+if(userAns==="skip" || userAns=="c" ){
 
     skippedQuestions++;  
-   document.write('skip question')
+   //document.write('skip question')
 
-
-//    userAns=prompt(`${question1}<br>${opt1}`)
-//    if(userAns==="c"||userAns==="c"){
-//    correctAnswers++;
-//    totalScore+=rightAns1=1000;
-   
-   
-//    }else if(userAns==="skip"){
-//    skippedQuestions++;
-//    document.write(`skip question ?`);
-//    }else{
-   
-//        wrongAnswers++;
-//        document.write("wrong ans")
-//    }   
    //---------2 Q
    
    userAns=prompt(`${question2}\n${opt2}`)
    if(userAns==="b"||userAns==="B"){
    correctAnswers++;
    totalScore+=rightAns2=2000;
-   document.write("correct Ans")
+   //document.write("correct Ans")
    
    }else if(userAns==="skip"){
    skippedQuestions++;
-   document.write(`skip question ?`);
+   //document.write(`skip question ?`);
    }else{
    
        wrongAnswers++;
-       document.write("wrong ans <br>")
+      // document.write("wrong ans <br>")
    }
    
    //-----------Q3
@@ -94,11 +79,11 @@ if(userAns==="skip"){
    
    }else if(userAns==="skip"){
    skippedQuestions++;
-   document.write(`skip question ?<br>`);
+   //document.write(`skip question ?<br>`);
    }else{
    
    wrongAnswers++;
-   document.write("wrong ans <br>")
+   //document.write("wrong ans <br>")
    }
    
    
@@ -112,11 +97,11 @@ if(userAns==="skip"){
    
    }else if(userAns==="skip"){
    skippedQuestions++;
-   document.write(`skip question ? <br>`);
+   //document.write(`skip question ? <br>`);
    }else{
    
    wrongAnswers++;
-   document.write("wrong ans <br>")
+   //document.write("wrong ans <br>")
    }
    
    
@@ -132,111 +117,18 @@ if(userAns==="skip"){
    
    }else if(userAns==="skip"){
    skippedQuestions++;
-   document.write(`skip question ? <br>`);
+   //document.write(`skip question ? <br>`);
    }else{
    
    wrongAnswers++;
-   document.write("wrong ans <br>")
+   //document.write("wrong ans <br>")
    }
     endgame();
-}else{
-
-userAns=prompt(`${question1}\n${opt1}`)
-if(userAns==="c"||userAns==="c"){
-correctAnswers++;
-totalScore+=rightAns1=1000;
-
-
-}else if(userAns==="skip"){
-skippedQuestions++;
-document.write(`skip question ? <br>`);
-}else{
-
-    wrongAnswers++;
-    document.write("wrong ans <br>")
-}
-
-
-
-//---------2 Q
-
-userAns=prompt(`${question2}\n${opt2}`)
-if(userAns==="b"||userAns==="B"){
-correctAnswers++;
-totalScore+=rightAns2=2000;
-document.write("correct Ans")
-
-}else if(userAns==="skip"){
-skippedQuestions++;
-document.write(`skip question ? <br>`);
-}else{
-
-    wrongAnswers++;
-    document.write("wrong ans")
-}
-
-//-----------Q3
-
-userAns=prompt(`${question3}\n${opt3}`)
-if(userAns==="B"||userAns==="b"){
-correctAnswers++;
-totalScore+=rightAns3=3000;
-
-
-}else if(userAns==="skip"){
-skippedQuestions++;
-document.write(`skip question ? <br>`);
-}else{
-
-wrongAnswers++;
-document.write("wrong ans <br>")
-}
-
-
-//Q4----------------------------
-
-userAns=prompt(`${question4}\n${opt4}`)
-if(userAns==="c"||userAns==="C"){
-correctAnswers++;
-totalScore+=rightAns4=5000;
-
-
-}else if(userAns==="skip"){
-skippedQuestions++;
-document.write(`skip question ?<br> `);
-}else{
-
-wrongAnswers++;
-document.write("wrong ans <br>")
-}
-
-
-
-//--------Q5---
-
-
-userAns=prompt(`${question5}\n${opt5}`)
-if(userAns==="B"||userAns==="b"){
-correctAnswers++;
-totalScore+=rightAns3=10000;
-
-
-}else if(userAns==="skip"){
-skippedQuestions++;
-document.write(`skip question ? <br>`);
-}else{
-wrongAnswers++;
-document.write("wrong ans <br>")
-}
-endGame();
-}
-
-}else{
-
-
 }
  
 } 
+
+
 function endgame(){
 
     let rating=parseInt(prompt("give your rating this game "))
@@ -254,8 +146,8 @@ document.write(`<h4>Skipped Question:${skippedQuestions}<br>
 
 }
 
+}
 strt();
-
 
 
 
