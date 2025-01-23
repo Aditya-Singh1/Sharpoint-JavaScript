@@ -16,11 +16,12 @@ let feedBack
 let tip 
 let t=0;
 let total=0;
-    switch(food){
+    switch(foodlist){
 
         case "Pizza":
  feedBack=prompt(`Give your feedback `)
  tip=Number(prompt("you want give tip skip for 0 "))
+
  t=0;
  total=300;
 if(tip>=0){
