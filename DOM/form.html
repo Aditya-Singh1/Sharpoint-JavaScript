@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="main">
+        <div class="stdent_name">
+            <label for="">studentName</label><br>
+            <input type="text" name="" id="stu_name" placeholder="username"><br><br>
+            <label for="">studenAge</label><br>
+            <input type="text" name="" id="stu_Age" placeholder="age">
+
+        </div>
+        <br><br>
+        <button onclick="getdata()">Fetch data</button>
+     </div>
+<h1 id="set"></h1>
+     <script>
+
+        function getdata(){
+            let set=document.getElementById('set')
+
+            let get=stu_name=document.getElementById('stu_name').value
+            
+            let get1=stu_age=document.getElementById('stu_Age').value
+            
+            set.innerHTML=(`Name:${get},Age:${get1}`);
+        }
+     </script>
+</body>
+</html>
