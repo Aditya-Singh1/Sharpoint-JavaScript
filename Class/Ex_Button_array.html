@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    <script>
+let ar=[10,20,30,40,50];
+let data;
+let btnid;
+for(let i=0;i<ar.length;i++){
+
+    let btn=document.createElement('button')
+     document.body.append(btn);
+    // <button type="" className=""></button>
+
+      btnid=btn.id=`a${i}`
+      btn.onclick=`fun${i}();`
+      btn.innerHTML= ar[i];
+      data=btn.onclick=ar[i]**2;
+    
+     document.write(`<span id="${btnid}">${data}</span>`);
+console.log(btnid);
+     
+
+    //  document.write(`<button>${ar[i]}</button>`)
+    
+}
+
+ 
+
+function fun(ch){
+
+    if(ch=='a0'){
+        document.getElementById('a0').style.display="none"
+    }
+
+     
+}
+
+
+    </script>
+</body>
+</html>

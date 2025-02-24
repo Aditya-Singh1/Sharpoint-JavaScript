@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{margin: 0;padding: 0%;box-sizing: border-box;}
+    .bg0{background-color: chartreuse;}
+    .bg1{background-color:hotpink;}
+    .bg2{background-color:chocolate}
+    .bg3{background-color:darksalmon}
+    .bg4{background-color:fuchsia}
+
+    .box{
+        width:100%;
+        height:90vh;
+        background-color: beige;
+    }
+    .card{
+        width: 32%;
+        height: 500px;
+        /* background-color: aquamarine; */
+        float: left;
+        margin-left: 1%;
+    }
+    .box img{
+        width:100%;
+        height:300px;
+    }
+    .left{
+        width: 100%;
+        height: 80px;
+        float: left;
+        /* background-color: red; */
+        text-align: center;
+    }
+
+    .right{
+        width:48%;
+        height: 80px;
+        float: right;
+        /* background-color: red; */
+    }
+    .btn1{width:80px;height: 50px; border: 10%;background-color: blue; float:left;margin-left: 10%;border-radius:20px;}
+    .btn2{width:80px;height: 50px; border: 10%;background-color: blue; float:left;margin-left: 10%;border-radius:20px;}
+    .btn3{width:80px;height: 50px; border: 10%;background-color: blue; float:left;margin-left: 10%;border-radius:20px;}
+    .sub{width:100px;height:50px;background-color: blue; float: left;margin-top: 5vh;margin-left: 40%;border-radius: 5px;}
+
+</style>
+</head>
+<body>
+    <div class="box"></div>
+
+<script>
+
+class A{
+
+constructor(name,address,im){
+
+    this.name=name;
+    this.address=address;
+    this.im=im;
+   
+
+
+}
+
+details(){
+ let box=document.getElementsByClassName('box')[0]
+let ig=document.createElement('img')
+box.append(ig);
+ig.src = this.im;
+
+ 
+let data=`<img src="${ig.src}"><div class="left"><h3>userName :${this.name}</h3><h3>UserAddress: ${this.address}</h3> <hr></div>`
+
+return data;
+}
+
+}
+
+
+ 
+
+let obj  =new A("Aditya","Baghpat","/photos/business1.jpg")
+let obj1 =new A("Prerna","Modinagar","/photos/business2.jpg")
+let obj2 =new A("Monu","Meerut","/photos/business3.jpg")
+
+let ar=[obj,obj1,obj2];
+let box=document.getElementsByClassName('box')[0]
+
+
+for(let i=0;i<=ar.length;i++){
+    
+  box.innerHTML+=`<div class="card  bg${[i]}">${ar[i].details()}</div>`  
+}
+
+</script>
+
+</body>
+</html>

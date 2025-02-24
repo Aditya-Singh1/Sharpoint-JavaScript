@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:auto;padding: 0;}
+        .card{
+            width:100%;
+            height:500px;
+            background-color: wheat;
+             
+    
+        }
+        .card img{
+            width:100%;
+            height:300px;
+        }
+        .c1{width:32%;
+        height:500px;
+        background-color: yellow;
+        float: left;
+        margin-left: 1%;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+<div class="card"></div>
+  
+    <script>
+
+ class A{
+    userName;
+    userId;
+    UserPass;
+constructor(userName,mg){
+    
+this.userName=userName;
+this.mg=mg;
+
+}
+
+
+ detail(){
+
+let card=document.getElementsByClassName('card')[0];    
+let i=document.createElement('img');
+// card.append(i);
+
+i.src=`${this.mg}` 
+
+
+let data=`<img src="${i.src}" width="100">${this.userName}`
+                 
+return data;
+
+ }
+
+       
+}
+
+
+       let obj1=new A("Aditya","/photos/business1.jpg");
+       let obj2=new A("Prerna","/photos/business2.jpg");
+       let obj3=new A("Priya","/photos/business3.jpg");
+       obj1.detail()
+
+       let arr=[obj1,obj2,obj3];
+
+        
+
+        let card=document.getElementsByClassName('card')[0]
+        for(let i=0;i<arr.length;i++){
+
+            // console.log(arr[i].detail()) 
+            let card=document.getElementsByClassName('card')[0]
+            card.innerHTML+=`<div class="c1">${arr[i].detail()}</div>`   
+        
+        }
+         
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<body>
+
+     
+    <p id="p"></p>
+
+    <script>
+        
+        const numbers = [10, 20, 30];
+ 
+        // function show(num,spn){
+
+        // spn.innerHTML=num**2;
+        // }
+        numbers.forEach(num => {
+            const button = document.createElement("button");
+            button.innerHTML = num;
+
+            // let spn=document.createElement('span');
+
+            button.onclick = function(){
+            //  show(num,spn)
+                
+               document.getElementById("p").innerHTML = `${num * num}`;
+            };
+             document.body.append(button);
+        });
+    </script>
+
+</body>
+</html>

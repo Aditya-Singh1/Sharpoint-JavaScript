@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #span{display: none;}
+    </style>
+</head>
+<body>
+
+
+
+    <input type="text" placeholder="UserName" id="n">
+    <button onclick="check()">click</button>
+  <h1 id="span"></h1>
+
+
+
+
+
+
+
+    <script>
+let rev="";
+
+function check(){
+
+let text=document.getElementById('n').value;
+let id=document.getElementById('span')
+for(let i=0;i<text.length;i++){
+
+    rev=text[i]+rev;
+
+
+
+}
+ 
+document.write(rev)
+
+    // if(check=='span'){
+
+    //     document.getElementById('span').style.display='block'
+    // }
+
+}
+
+// let str="aditya Singh"
+// let str1=""
+
+// for(let i=str.length-1;i>=0;i--){
+
+//     str1+=str[i]
+
+// }
+
+// console.log(str1)
+
+// let count=str.length-1;
+
+// // console.log(count);
+// for(let i=0;i<str.length-1;i++){
+
+// str1+=str[count--]
+
+// }
+// console.log(str1)
+
+
+// // for(let i=0;i<str.length;i++){
+
+// // str1=str[i]+str1;
+
+// // }
+// // console.log(str1)
+
+
+
+
+    </script>
+</body>
+</html>

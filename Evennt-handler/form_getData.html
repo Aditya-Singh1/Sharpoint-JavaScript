@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <form action="" id="my_form">
+    <p><label for="">studentName</label>
+    <input type="text" id="s_name"></p>
+
+<p>
+<label for="">studentPassword</label>
+<input type="password"></p>
+<p>
+<label for="">studentPassword</label>
+<input type="password">
+</p>
+<p>
+<label for="">studentDOB</label>
+<input type="date">
+</p>
+
+<p>
+<label for="">studentGender</label>
+<input type="radio" name="gender">
+<input type="radio" name="gender">
+</p>
+
+<button type="reset">ClickMe</button>
+
+ </form> 
+ 
+ <script>
+
+// function getdata(event)
+// {
+// event.preventDefault();
+// let s_name=document.getElementById('s_name').value;
+// console.log(s_name)
+
+// }
+//  </script>
+
+ <script>
+let my_form=document.getElementById('my_form').addEventListener('reset',function(){
+    //  event.preventDefault();
+     let s_name=document.getElementById('s_name').value;
+     
+     console.log(s_name)
+    //  document.getElementById('my_form').reset()
+
+})
+ </script>
+</body>
+</html>

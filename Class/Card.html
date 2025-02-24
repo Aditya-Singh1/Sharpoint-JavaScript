@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width:32%;
+            height:500px;
+            background-color: blue;
+            float:left;
+            margin-left: 1%;
+            margin-top: 1vh;
+        }
+.img{width:150px;height:150px;border-radius: 50%;background-color: yellow;margin-left: 30%;margin-top: 5%;}
+.img img{
+    width:100%;
+    height:150px;
+    border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+   
+<script>
+    
+
+    let obj=[
+        {UserName:"Aditya-Singh02",imag:"/photos/business1.jpg"},
+        {UserName:"Anaya-Singh",imag:"/photos/business2.jpg"},
+        {UserName:"Prerna-Gupta",imag:"/photos/business3.jpg"},
+        {UserName:"Priya-Gupta",imag:"/photos/GIRL.jpeg"},
+        {UserName:"-Gupta",imag:"/photos/arnold2.jpeg"},
+    ]
+
+    for(let i=0;i<obj.length;i++){
+
+        document.write(`
+    <div class="card"> 
+
+    <div class="img">  
+<img src="${obj[i].imag}" alt="">
+        </div>
+        
+        </div>
+        
+        `);
+    }
+
+
+</script>
+</body>
+</html>

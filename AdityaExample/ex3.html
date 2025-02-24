@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="b"></div>
+    <script>
+let c=0;
+let counter=setInterval(fun,100)
+ 
+function fun(){
+c+=1;
+if(c<=25){
+   
+console.log(c);
+let b=document.getElementsByClassName('b')[0].style.backgroundColor="blue";
+ document.getElementsByClassName('b')[0].style.width='20px';
+ document.getElementsByClassName('b')[0].style.height=`20px`;
+ document.getElementsByClassName('b')[0].style.marginTop=`${c}%`;
+//  document.getElementsByClassName('b')[0].style.marginLeft=`${c}%`;
+//  document.getElementsByClassName('b')[0].style.marginBottom=`${c}%`;
+    //clearInterval(c)
+}else if(c<=50){
+    console.log(c)
+    let b=document.getElementsByClassName('b')[0].style.backgroundColor="blue";
+ document.getElementsByClassName('b')[0].style.width='20px';
+ document.getElementsByClassName('b')[0].style.height=`20px`;
+//  document.getElementsByClassName('b')[0].style.marginTop=`${c}%`;
+ document.getElementsByClassName('b')[0].style.marginLeft=`${c}%`;
+
+
+}else if(c<=75){
+
+    let b=document.getElementsByClassName('b')[0].style.backgroundColor="blue";
+ document.getElementsByClassName('b')[0].style.width='20px';
+ document.getElementsByClassName('b')[0].style.height=`20px`;
+ document.getElementsByClassName('b')[0].style.marginTop=`${0}%`;
+
+} 
+
+}
+
+
+
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Set interval clear</h1>
+
+    <button  onclick="start()">clickMe<span id="set"></span></button>
+
+    <script>
+let set=document.getElementById('set')
+
+let count=0;
+function counter(){
+    count+=1;
+    set.innerHTML=count;
+}
+ 
+function start(){
+    setInterval(counter,1000);
+}
+    </script>
+</body>
+</html>

@@ -27,7 +27,10 @@
             
             let get1=stu_age=document.getElementById('stu_Age').value
             
-            set.innerHTML=(`Name:${get},Age:${get1}`);
+            let h1=document.createElement('h1')
+            h1.innerHTML=`name${get},Age:${get1}`
+            document.body.append(h1);
+            
         }
      </script>
 </body>

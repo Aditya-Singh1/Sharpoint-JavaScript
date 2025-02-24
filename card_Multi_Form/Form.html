@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width:400px;
+            height:300px;
+            background-color: skyblue;
+            margin: auto;
+        }
+        .card{
+            width:300px;
+            height:400px;
+            background-color:turquoise;
+            border-radius: 5px;
+            /* margin:auto; */
+
+
+        }
+
+        .card img{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            margin-left: 25%;
+            margin-top: 5vh;
+        }
+
+        .card .left{
+            float: left;
+            width:140px;
+            height:150px;
+            /* background-color: blue; */
+            text-align: right;
+        }
+        .card .right{
+            float: left;
+            width:140px;
+            height:150px;
+            /* background-color: blue; */
+             margin-left: 10px;
+             text-align: left;
+        }
+
+        .container{
+            display: flex;
+            gap:10px;
+            margin-top:20vh;
+        }
+        #file{
+            display: none;
+        }
+label{
+    width:100px;
+    /* height: 80px; */
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    font-weight: 700;
+}
+input[type="text"]{
+    width:98%;
+    height:40px;
+    font-size: 20px;
+    
+}
+
+ button{
+    width:100px;
+    height:40px;
+    font-size: 20px;
+ } 
+        
+    </style>
+</head>
+<body>
+<div class="box">
+ 
+<p><input type="text" placeholder="UserName" id="n"></p>
+<p><input type="text" placeholder="UserAddeess" id="a"></p>
+<label for="file">UploadImage</label>
+<p><input type="file" accept="image/jpg,image/png,image,image/jpeg" placeholder="file" id="file" onchange="submit(event)"></p>
+  
+</div>
+
+<div class="container"></div>
+ 
+
+    <script src="./Form.js"></script>
+</body>
+</html>

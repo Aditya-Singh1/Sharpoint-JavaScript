@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    input{width:80%;height:40px;font-size: 20px;padding-left: 20px;}
+    select{width: 80%;height:40px;padding-left: 20px;font-size: 20px;}
+    </style>
+</head>
+<body>
+     
+    <form action="" id="form">
+        <fieldset style="width: 40%;height:500px;margin: auto;">
+            <legend>Form</legend>
+        <p><input type="text" placeholder="username" id="un"></p>
+        <p><input type="email" placeholder="email" id="ue"></p>
+        <p><input type="tel" placeholder="contact" id="ut"></p>
+        <p><input type="text" placeholder="address" id="ua"></p>
+       
+         <p>
+        <select className="" id="sel">
+         <option value="">Chose</option>
+         <option value="BCA">BCA</option>
+         <option value="MCA">MCA</option>
+         <option value="B.TECH">B.TECH</option>
+         <option value="B.TECH">M.TECH</option>
+         </select>
+        </p>
+<p><input type="radio" name="g" value="male" className="" id="gender1">Male</p>
+<p><input type="radio" name="gm" value="female" className="" id="gender2">Female</p>
+<button type="submit">Submit</button>
+</fieldset>
+    </form>
+ 
+<script>
+let form=document.getElementById('form').addEventListener('submit',function(){
+event.preventDefault();
+let u_name=document.getElementById('un').value;
+let u_email=document.getElementById('ue').value;
+let u_address=document.getElementById('ua').value;
+let u_contact=document.getElementById('ut').value;
+let u_course=document.getElementById('sel').value;
+let u_gender1=document.getElementById('gender1').value;
+let u_gender2=document.getElementById('gender2').value;
+
+document.write(`
+<h2>${u_name}</h2>
+<h2>${u_email}</h2>
+<h2>${u_address}</h2>
+<h2>${u_contact}</h2>
+<h2>${u_course}</h2>
+`
+)
+
+
+
+})
+
+
+
+</script>
+
+
+</body>
+</html>

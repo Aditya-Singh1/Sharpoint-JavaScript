@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Timeout</title>
+    <style>
+        .main{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <div class="main">
+<div class="box"></div>
+    </div>
+<script>
+ 
+ let count=0;
+let x=0;
+ function counter(){
+    count+=1;
+    if(count<=80){
+        // clearInterval(x)
+        console.log(count)
+let get=document.getElementsByClassName('box')[0].style.width=`${count}%`;
+let get1=document.getElementsByClassName('box')[0].style.height='20px';
+let get2=document.getElementsByClassName('box')[0].style.backgroundColor='red';
+
+
+    }
+    
+ }
+
+ function start(){
+   setInterval(counter,40);
+   
+   
+       
+    }
+  
+  
+ 
+  
+  
+start()
+
+ 
+
+   
+ 
+
+  
+</script>
+</body>
+</html>

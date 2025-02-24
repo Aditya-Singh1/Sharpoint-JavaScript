@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg0{background-color: chartreuse;}
+        .bg1{background-color: goldenrod}
+        .bg2{background-color: tomato}
+        .main{background-color: bisque;width: 100%;height:90vh;}
+        .card{width:32%;height:500px;float: left;margin-left: 1%;}
+       .card{
+        width:32%;
+        height:550px;
+        /* background-color: aqua; */
+        text-align:left;
+        
+       }
+       
+        .main img{
+            width:100%;
+            height:300px;
+        }
+        
+         
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+
+    <script>
+ class profile{
+
+    
+constructor(userName,email,password,address,jobtitle,im){
+
+    this.userName=userName;
+    this.email=email;
+    this.password=password;
+    this.address=address
+    this.jobtitle=jobtitle
+    this.im=im;
+}
+
+userDetail(){
+let main=document.getElementsByClassName('main')[0]
+let ig=document.createElement('img')
+main.append(ig);
+ig.src=this.im;
+
+let data=`<img src="${ig.src}"><h3>UserName: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.userName}</h3>
+<h3>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.email}</h3>
+<h3>Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.password}</h3>
+<h3>Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.address}</h3>
+<h3>Jobttle: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.jobtitle}</h3>
+
+`
+
+return data
+
+}
+}
+
+
+let obj1=new profile("Aditya","adityasingh0400@gmail.com","1234","Barwala","JavaDeveloper","/photos/business1.jpg");
+let obj2=new profile("Prerna","prerna0400@gmail.com","1534","Modinagar","JavaDeveloper","/photos/business2.jpg");
+let obj3=new profile("Priya","Priygupta0400@gmail.com","1834","Meerut","JavaDeveloper","/photos/business3.jpg");
+
+let arr=[obj1,obj2,obj3];
+let main =document.getElementsByClassName('main')[0]
+for(let i=0;i<arr.length;i++){
+
+ main.innerHTML+=`<div class="card bg${[i]}">${arr[i].userDetail()}</div>`
+
+}
+
+    </script>
+</body>
+</html>

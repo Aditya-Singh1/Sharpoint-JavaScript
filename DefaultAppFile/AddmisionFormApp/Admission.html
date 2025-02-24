@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{margin: 0;box-sizing: border-box;}
+         .main{width:100%;height:auto;background-color: bisque;display:none;}
+         input{width:100%;height:50px;font-size:25px;}
+         select{width:20%;height:50px;font-size:25px;}
+#btn1{width:100px;height:40px;background-color: greenyellow;color: blue;font-size:18px;border-radius: 5px;border: transparent;}
+#btn2{width:150px;height:40px;background-color: greenyellow;color: blue;font-size:18px;border-radius: 5px;border: transparent;}
+ .reg{width:50%;height: 500px;background-color:blue;margin: auto;margin-top: 20vh;}   
+    </style>
+</head>
+<body>
+<div class="main">
+
+    <h3>NAME</h3>
+    <P><input type="text" class="n"></P>
+
+    <h3>EMAIL</h3>
+    <P><input type="email" class="e"></P>
+
+    <h3>CONTACT</h3>
+    <P><input type="tel" class="t"></P>
+
+    <h3>ADDRESS</h3>
+    <P><input type="text" class="a"></P>
+
+    <h3>COURSE</h3>
+    <P><select name="" id="sel" class="sel">
+    <option value="">SELECT</option>
+    <option value="BCA">BCA</option>
+    <option value="MCA">MCA</option>
+    <option value="B.TECH">B.TECH</option>
+    <option value="M.TECH">M.TECH</option>
+    </select></P>
+
+    <h3>DATE</h3>
+    <P><input type="date" class="d"></P>
+
+    <button onclick="fun()" id="btn1">Add_Data</button>
+
+<table border="1" width="100%" class='tab'>
+<tr>
+    <th>StudentName_</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>Address</th>
+    <th>Course</th>
+    <th>Date</th>
+</tr>
+
+</table>
+
+</div>
+
+<div class="reg">
+<marquee behavior="" direction=""><h1>Registration Form</h1></marquee>
+
+<button id="btn2" onclick="fun1('reg')" style="margin-top: 40vh;margin-left:270px;">Registeration</button>
+ 
+</div>
+<script src="./Admission.js"></script>
+</body>
+</html>

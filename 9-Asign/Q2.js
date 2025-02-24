@@ -1,17 +1,18 @@
-
+function fun(){
 
 let color=["red","blue","greenyellow","purple"]
+
 let doc=document.getElementById("btn");
 
 doc.addEventListener('click',function(){
 
  let deffer=[Math.floor(Math.random()*color.length)]
 
- console.log(deffer);
-
+document.body.style.backgroundColor=color[deffer];
+  
 })
 
-
+}
 
 
 
