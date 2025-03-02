@@ -1,10 +1,10 @@
 let str="this is javascript programming place".toString().split('')
 
-let match="d"
+let match="t"
 str.forEach(val=> {
 if(val===match){
 
-    console.log("this word is Exists in sentence ",val);
+  
 } 
 
   });
