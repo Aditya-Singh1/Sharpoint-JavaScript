@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiPle AJAX API Integration</title>
+    <style>
+        .card-container {
+             width: 100%;
+            justify-content: center;
+            height: 500px;
+        }
+        .card {
+            width: 250px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            text-align: center;
+            float: left;
+            margin: 2vh;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+         
+        .header{
+            width: 100%;
+            background-color: teal;
+            height: 100px;
+            float: left;
+        }
+        .footer{
+            width:100%;
+            height:100px;
+            background-color: teal;
+            float: left;
+        }
+        #loading{
+            height:100px;
+            width:20%;
+            margin-top:40vh;
+            
+            background-color: aqua;
+        }
+
+        input[type="number"]{
+            width:40%;
+            height:40px;
+            font-size: 20px;
+            padding-left: 1%;
+            border-radius: 5px;
+            border: solid transparent;
+            margin-left: 5%;
+            margin-top: 0.5%;
+        }
+        #btn{
+            width:100px;
+            height: 40px;
+            background-color:blue;
+            font-size: 20px;
+            border-radius: 5px;
+            border: solid transparent;
+            color: white;
+            font-weight: 800;
+            margin-left:  2%;
+            margin-right: 10%;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+<div class="header">
+<h1 style="color: white;"><input type="number" placeholder="How Many Card Want You Print" id="num"> <button id="btn">fetch</button>WEBPAGE</h1>
+</div>
+<div id="card-container" class="card-container"> 
+
+    
+
+</div>
+
+<div class="footer">
+   <h1 style="color: white; text-align: center;"> &copy; create by Aditya  </h1> 
+</div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

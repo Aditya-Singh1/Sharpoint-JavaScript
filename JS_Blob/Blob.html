@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let data=["my name is aditya singh","my name is monu singh"];
+
+        let blob=new Blob(data)
+        console.log(blob) //{type:'text/plain'}
+        let a=document.createElement("a")
+        a.href=URL.createObjectURL(blob)
+        a.download="J_Query/task.txt"
+        a.innerHTML="download Now"
+        document.body.append(a)
+        console.log(a);
+        document.write(data);
+
+
+    </script>
+</body>
+</html>

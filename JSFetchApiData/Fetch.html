@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+<div class="card">
+      <img src="" alt="">
+      <p></p>
+      <p></p>
+      <p></p>
+
+</div>
+
+<button id="fetchBtn">fetch</button>
+<p id="load"></p>
+</div>
+
+
+<script>
+
+$(document).ready(function(){
+
+    $("#fetch").click(function(){
+
+        let button=$(this);
+
+        let dataLoad=$("$load");
+        
+        dataLoad.text("data loading");
+
+        button.prop("disabled",true);
+        
+
+        $.ajax({
+
+            url:"https://randomuser.me/api/",
+
+            method:"GET",
+
+           success:function(response){
+
+           let user=response.results[0]
+   
+          
+          let user_data=`
+          <div style="opacity:0">
+            <img src="${user_data.picture.large}">
+            <p>${user.name.first}</p>
+            <p>${user.name.last}</p>
+          </div>
+
+          `
+          dataLoad.text("");
+          $("#card").empty();
+         
+          $("#card").append(user_data);
+
+          user_data.animate({opacity:1,},1000)
+
+          },
+
+          error:function(response){
+
+            console.log("error data not found !",response.status);
+            
+
+          },
+
+
+          complete:function(){
+
+            setTimeout(()=>{
+         button.prop("disabled",false);
+
+            },1000)
+
+          }
+
+
+
+
+
+        })
+
+        })
+
+
+})
+
+
+</script>
+</body>
+</html>

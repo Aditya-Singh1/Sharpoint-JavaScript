@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+<div id="card">
+
+
+<button id="fetch">click</button>
+<p id="loading"></p>
+</div>
+
+<script>
+    function getData(cf){
+
+    let xhr= new XMLHttpRequest()
+    xhr.open("GET","http")
+    xhr.load=function(){
+        
+        if(xhr==200){
+
+            cf(false,JSON.parse(xhr.responseText))
+        }else{
+
+            cf("error");
+
+        }
+    }
+xhr.send();
+
+    }
+
+document.getElementById("fetch").addEventListener("click",function(){
+let button=document.getElementById("fetch");
+let card=document.getElementById('card');
+let load=document.getElementById('loading');
+
+load.innerText="data loding..."
+
+button.disabled=true;
+
+getData((err,data)=>{
+
+    if(err){
+console.log(err);
+
+    }else{
+        console.log(data);
+        user=data.results[0];
+card.innerHTML=`
+<img src="" alt="">
+<h2>${user.name.first}</h2>
+<h2></h2>
+
+`
+
+
+
+    }
+
+    setTimeout(()=>{
+button.disabled=false;
+    },1000)
+
+})
+
+})
+</script>
+ </body>
+ </html>

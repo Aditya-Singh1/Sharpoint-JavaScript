@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+ 
+.main{
+    margin:left;
+    margin-left: 500px;
+    
+}
+
+#card{width:300px;
+    height:400px;
+    background-color:skyblue;
+    margin-top: 20vh;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    <div id="card">
+        <img src="" alt="missing image..">
+        <h2>name</h2>
+        <p>email</p>
+        <p>conatct</p>
+        
+    </div>
+
+    <button id="fetch">Fetch</button>
+    <p id="load"></p>
+</div>
+    <script>
+
+        $(document).ready(function(){
+
+            $('#fetch').click(function(){
+            let button=$(this);
+            let load_content=$('#load')
+            load_content.text("data loding...")
+            button.prop("disabled",true)
+            $.ajax(
+                {
+                    url:"https://randomuser.me/api/",
+                    
+                    method:"GET",
+
+                    success:function(response){
+
+                    let user_data=response.result[0];
+
+                    console.log(user_data);
+                 
+                    let card_data=$(`
+                    <div style="opacity:0">
+                       <img href="${user_data.picture.large}" alt="userimage">
+                       <h2>${user_data.name.first}</h2>
+                       <p>${user_data.email}</p>
+                       <p>${user_data.phone}</p>
+                       </div>
+                    
+                    `)
+
+                   
+                    load_content.text("")
+
+                    ("#card").empty();
+                    $("#card").append(card_data);
+                    card_data.animate({opacity:1},1000)
+                    console.log(card_data)
+
+                    },
+
+                    error:function(response){
+                    console.log("error in fetching data",response.status)
+                    },
+
+                    complete:function(){
+
+                        setTimeout(()=>{
+                      button.prop("disabled",false)
+                        },1000)
+
+                    }
+                    
+                }
+            )
+
+            })
+        })
+    </script>
+</body>
+</html>
